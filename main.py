@@ -51,11 +51,11 @@ plt.title("Distribución de la edad por clase")
 plt.grid(True)  # Agregamos una rejilla para mejor visualización
 plt.show()
 
-# Creamos diagramas de cajas para las edades de supervivientes y no supervivientes
+# Creamos diagramas de cajas para las edades de supervivientes  y no supervivientes
 plt.figure(figsize=(8, 6))
 
 plt.boxplot([datos[datos["survived"] == 1]["age"], datos[datos["survived"] == 0]["age"]],
-           tick_labels=["Supervivientes", "No supervivientes"], vert=False)
+           labels=["Supervivientes", "No supervivientes"], vert=False)
 
 plt.xlabel("Edad")
 plt.title("Distribución de la edad por supervivencia")
